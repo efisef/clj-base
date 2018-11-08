@@ -1,6 +1,6 @@
 FROM openjdk:12-alpine
 
-RUN jlink -c --no-man-pages --no-header-files -G --module-path $JAVA_HOME/jmods --add-modules java.base,java.management,java.rmi,java.sql,java.naming --output /usr/bin/jre
+RUN jlink -c --no-man-pages --no-header-files -G --module-path $JAVA_HOME/jmods --add-modules java.base,java.management,java.rmi,java.sql,java.naming,jdk.unsupported --output /usr/bin/jre
 
 FROM alpine:3.8
 
