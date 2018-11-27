@@ -8,7 +8,7 @@ COPY --from=0 /usr/bin/jre /usr/bin/jre
 ENV JAVA_HOME /usr/bin/jre
 
 RUN apt-get update
-RUN yes | apt-get install wget curl libc-dev gcc libssl-dev
+RUN yes | apt-get install wget curl libc-dev gcc libssl-dev pkg-config
 
 RUN wget https://download.clojure.org/install/linux-install-1.9.0.397.sh
 RUN chmod +x linux-install-1.9.0.397.sh
